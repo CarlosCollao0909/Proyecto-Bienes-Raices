@@ -1,0 +1,72 @@
+@use 'variables' as v;
+@use 'sass:color';
+
+.dark-mode {
+    background-color: color.adjust(v.$grisOscuro, $lightness: -5%);
+
+    p {
+        color: v.$blanco;
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: v.$gris;
+    }
+
+    .anuncio,
+    .resumen-propiedad {
+        padding: 1rem;
+        background-color: color.adjust(v.$grisOscuro, $lightness: 10%);
+        border: 1px solid color.adjust(v.$grisOscuro, $lightness: 10%);
+    }
+
+    .precio {
+        color: v.$verde;
+    }
+
+    .iconos-caracteristicas {
+        img {
+            filter: invert($color: 100%);
+        }
+    }
+
+    blockquote {
+        color: v.$blanco;
+    }
+
+    .formulario {
+
+        label,
+        legend,
+        p {
+            color: v.$gris;
+        }
+
+        input:not([type="submit"]),
+        textarea,
+        select {
+            background-color: color.adjust(v.$grisOscuro, $lightness: 10%);
+            border: 1px solid color.adjust(v.$grisOscuro, $lightness: 10%);
+            color: v.$blanco;
+        }
+    }
+    table.propiedades{
+        border: 1px solid color.adjust(v.$grisOscuro, $lightness: 10%);
+
+        thead{
+            background-color: color.adjust(v.$verde, $lightness: -3%);
+            color: v.$gris;
+        }
+
+        tbody{
+            tr{
+                td{
+                    color: v.$blanco;
+                }
+            }
+        }
+    }
+}
