@@ -40,4 +40,10 @@
             text-align: left;
         }
     }
+    p {
+        font-size: 4rem;
+        font-weight: v.$bold;
+        font-style: italic;
+        margin: 0;
+    }
 }

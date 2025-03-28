@@ -9,10 +9,9 @@
             </picture>
         </div>
         <div class="nosotros-texto">
-            <blockquote>25 años de Experiencia</blockquote>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit itaque molestiae autem ab veniam dolorum officiis culpa maxime reiciendis voluptates, repudiandae ullam consectetur. Sit reiciendis fuga inventore commodi ex alias?
-                Aspernatur optio quas facere aperiam similique unde pariatur vitae, sapiente, ad corrupti ea quisquam nam odio consequatur neque. Dolorum assumenda est at. Rerum quod ad nostrum quidem quos repellat magnam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae quasi asperiores totam quod quaerat deserunt vitae illum id fuga repudiandae, nulla iste maxime molestias error dignissimos quam nesciunt harum molestiae! </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime sequi totam qui est et, rerum, unde veniam cupiditate possimus cumque architecto dolorum excepturi amet quibusdam doloremque. Obcaecati ipsum quod eum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium quidem ex cum itaque iste quas deleniti sequi impedit ratione distinctio, at est reiciendis rem, aperiam eveniet facere in dignissimos? Sint?</p>
+            <blockquote>25 años de Experiencia en el Mercado Inmobiliario</blockquote>
+            <p>En TuVivienda+, nos dedicamos a la compra, venta y alquiler de propiedades con el compromiso de ofrecer un servicio de alta calidad. Contamos con más de 25 años de trayectoria ayudando a nuestros clientes a encontrar el hogar de sus sueños o la inversión perfecta.</p>
+            <p>Nos destacamos por nuestra atención personalizada, asegurándonos de que cada cliente reciba asesoramiento profesional y transparente en cada paso del proceso. Nuestra misión es brindarte tranquilidad y seguridad en cada transacción, garantizando que tomes la mejor decisión inmobiliaria.</p>
         </div>
     </div>
 </main>

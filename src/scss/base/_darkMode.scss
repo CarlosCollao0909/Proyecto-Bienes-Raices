@@ -2,7 +2,7 @@
 @use 'sass:color';
 
 .dark-mode {
-    background-color: color.adjust(v.$grisOscuro, $lightness: -5%);
+    background-color: color.adjust(v.$grisOscuro, $lightness: -3%);
 
     p {
         color: v.$blanco;
