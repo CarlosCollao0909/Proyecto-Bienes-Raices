@@ -1,5 +1,5 @@
 <main class="contenedor seccion">
-    <h1>Contacto</h1>
+    <h1>Contáctanos</h1>
 
     <?php if ($mensaje): ?>
         <p class="alerta exito"><?php echo $mensaje; ?></p>

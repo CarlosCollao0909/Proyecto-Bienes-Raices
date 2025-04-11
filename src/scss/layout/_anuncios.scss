@@ -12,11 +12,19 @@
     background-color: color.adjust(v.$gris, $lightness: 5%);
     border: 1px solid color.adjust(v.$gris, $lightness: -10%);
     margin-bottom: 2rem;
+    border-radius: 1rem;
+    .imagen-anuncio {
+        border-radius: .4rem;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    }
     .contenido-anuncio{
         padding: 2rem;
     }
     h3, p{
         margin: 0;
+    }
+    p {
+        text-align: justify;
     }
 }
 

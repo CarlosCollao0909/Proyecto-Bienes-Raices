@@ -20,6 +20,18 @@
             margin-top: 0;
         }
     }
+    .icono-login {
+        width: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        filter: invert(100%);
+        &:hover{
+            cursor: pointer;
+        }
+        @include m.tablet {
+            margin-top: 0;
+        }
+    }
 
 }
 

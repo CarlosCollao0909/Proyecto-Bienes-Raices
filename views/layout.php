@@ -33,6 +33,9 @@ if(!isset($inicio)){
 
                 <div class="derecha">
                     <img src="/build/img/dark-mode.svg" alt="boton dark mode" class="dark-mode-boton">
+                    <?php if (!$auth): ?>
+                            <a href="/login"><img class="icono-login" src="/build/img/user.svg" alt="login icon"></a>
+                        <?php endif; ?>
                     <nav class="navegacion">
                         <a href="/nosotros">Nosotros</a>
                         <a href="/propiedades">Anuncios</a>
@@ -57,6 +60,7 @@ if(!isset($inicio)){
                 <a href="./anuncios">Anuncios</a>
                 <a href="./blog">Blog</a>
                 <a href="./contacto">Contacto</a>
+
             </nav>
         </div>
         <p class="copyright">Todos los derechos reservados <?php echo date('Y'); ?> &copy;</p>
