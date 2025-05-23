@@ -22,7 +22,8 @@
 <div class="contenedor seccion seccion-inferior">
     <section class="blog">
         <h3>Nuestro Blog</h3>
-        <article class="entrada-blog">
+        <?php foreach ($entradasBlog as $entrada): ?>
+            <article class="entrada-blog">
             <div class="imagen">
                 <picture>
                     <source srcset="/build/img/blog1.avif" type="image/avif">
@@ -31,30 +32,15 @@
                 </picture>
             </div>
             <div class="texto-entrada">
-                <a href="/entrada">
-                    <h4>Terraza en el techo de tu casa</h4>
-                    <p class="informacion-meta">Escrito el: <span>20/01/2025</span> por: <span>Juan Carlos</span></p>
-                    <p>Consejos para construir una terraza en el techo de tu casa con los mejores materiales y ahorrando dinero</p>
+                <a href="/entrada?id=<?php echo $entrada->id; ?>">
+                    <h4><?php echo $entrada->titulo; ?></h4>
+                    <p class="informacion-meta">Escrito el: <span><?php echo $entrada->fecha; ?></span> </p>
+                    <p><?php echo $entrada->descripcion; ?></p>
                 </a>
             </div>
         </article> <!-- entrada-blog -->
+        <?php endforeach; ?>
 
-        <article class="entrada-blog">
-            <div class="imagen">
-                <picture>
-                    <source srcset="/build/img/blog2.avif" type="image/avif">
-                    <source srcset="/build/img/blog2.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/blog2.jpg" alt="imagen blog">
-                </picture>
-            </div>
-            <div class="texto-entrada">
-                <a href="/entrada">
-                    <h4>Guía para la decoración de tu hogar</h4>
-                    <p class="informacion-meta">Escrito el: <span>25/01/2025</span> por: <span>Admin</span></p>
-                    <p>Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>
-                </a>
-            </div>
-        </article> <!-- entrada-blog -->
     </section>
 
     <section class="testimoniales">

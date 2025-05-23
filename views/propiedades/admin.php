@@ -12,6 +12,8 @@
     <div class="separacion-gap">
         <a href="/propiedades/create" class="boton-verde">Nueva Propiedad</a>
         <a href="/vendedores/create" class="boton-amarillo">Nuevo Vendedor/a</a>
+        <a href="/blog/create" class="boton-celeste">Nueva Entrada de Blog</a>
+        <a href="/escritores/create" class="boton-azul">Nuevo Escritor/a</a>
     </div>
 
     <h2>Propiedades</h2>

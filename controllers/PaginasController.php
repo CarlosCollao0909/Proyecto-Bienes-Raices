@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Model\EntradaBlog;
 use MVC\Router;
 use Model\Propiedad;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -10,8 +11,11 @@ class PaginasController {
     public static function index(Router $router) {
         $inicio = true;
         $propiedades = Propiedad::get(3);
+        $entradasBlog = EntradaBlog::get(2);
+        
         $router->render('paginas/index', [
             'propiedades' => $propiedades,
+            'entradasBlog' => $entradasBlog,
             'inicio' => $inicio
         ]);
     }
@@ -36,11 +40,19 @@ class PaginasController {
     }
 
     public static function blog(Router $router) {
-        $router->render('paginas/blog');
+        $entradasBlog = EntradaBlog::all();
+        
+        $router->render('paginas/blog', [
+            'entradasBlog' => $entradasBlog
+        ]);
     }
 
     public static function entrada(Router $router) {
-        $router->render('paginas/entrada');
+        $id = validarRedireccionar('/blog');
+        $entrada = EntradaBlog::find($id);
+        $router->render('paginas/entrada', [
+            'entrada' => $entrada
+        ]);
     }
 
     public static function contacto(Router $router) {

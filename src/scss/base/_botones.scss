@@ -16,3 +16,11 @@
 .boton-rojo{
     @include m.boton(v.$rojo, v.$blanco, inline-block);
 }
+
+.boton-azul {
+    @include m.boton(v.$azul, v.$blanco, inline-block);
+}
+
+.boton-celeste {
+    @include m.boton(v.$celeste, v.$blanco, inline-block);
+}
