@@ -30,4 +30,44 @@ class BlogController {
             'errores' => $errores
         ]);
     }
+
+    public static function update(Router $router) {
+        $id = validarRedireccionar('/admin');
+        $entrada = EntradaBlog::find($id);
+        $escritores = Escritor::all();
+        $errores = EntradaBlog::getErrores();
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            //asignar los atributos
+            $args = $_POST['entrada'];
+            //sincronizar el objeto en memoria con los cambios realizados por el usuario
+            $entrada->sincronizar($args);
+        
+            //validar
+            $errores = $entrada->validar();
+        
+            if (empty($errores)) {
+                $entrada->update();
+            }
+        }
+
+        $router->render('blog/update', [
+            'entrada' => $entrada,
+            'escritores' => $escritores,
+            'errores' => $errores
+        ]);
+    }
+
+    public static function delete() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            //validar id
+            $id = $_POST['id'];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+
+            if ($id) {
+                $blog = EntradaBlog::find($id);
+                $blog->delete();
+            }
+        }
+    }
 }

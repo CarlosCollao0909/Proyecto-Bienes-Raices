@@ -4,7 +4,8 @@ namespace Controllers;
 
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\ImageManager as Image;
-
+use Model\EntradaBlog;
+use Model\Escritor;
 use MVC\Router;
 use Model\Propiedad;
 use Model\Vendedor;
@@ -13,11 +14,15 @@ class PropiedadController {
     public static function index(Router $router) {
         $propiedades = Propiedad::all();
         $vendedores = Vendedor::all();
+        $escritores = Escritor::all();
+        $entradasBlog = EntradaBlog::all();
         //variables con los mensajes
         $resultado = $_GET['resultado'] ?? null;
         $router->render('propiedades/admin', [
             'propiedades' => $propiedades,
             'vendedores' => $vendedores,
+            'escritores' => $escritores,
+            'entradasBlog' => $entradasBlog,
             'resultado' => $resultado
         ]);
     }
